@@ -2,7 +2,8 @@
   "name": "viza",
   "displayName": "Viza Commit Helper",
   "description": "Generates commit messages and copies to clipboard",
-  "version": "0.0.1",
+  "version": "0.0.5",
+   "icon": "images/icon.png", 
   "publisher": "VisaDev",
   "license": "MIT",
   "engines": {
