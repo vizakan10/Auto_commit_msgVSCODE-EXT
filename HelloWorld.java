@@ -1,5 +1,5 @@
 public class HelloWorld {
     public static void main(String[] args) {
-        System.out.println("test record");
+        System.out.println("test for the record");
     }
 }
