@@ -3,8 +3,14 @@
   "displayName": "Auto-Commit_Message",
   "description": "Generates commit messages and copies to clipboard",
   "version": "0.0.1",
+  "publisher": "visakan",
+  "license": "MIT",
   "engines": {
     "vscode": "^1.103.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vizakan10/Auto_commit_msgVSCODE-EXT.git"
   },
   "categories": [
     "Other"
