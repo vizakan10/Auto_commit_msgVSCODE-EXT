@@ -54,7 +54,7 @@
 
 1. Open VS Code.
 2. Go to Extensions (`Ctrl+Shift+X` or `Cmd+Shift+X`).
-3. Search for **Auto-Commit Message** and install.
+3. Search for **Viza Commit Helper** and install.
 
 Or install from a VSIX file:
 
