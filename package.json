@@ -1,9 +1,9 @@
 {
   "name": "viza",
-  "displayName": "Auto-Commit_Message",
+  "displayName": "Viza Commit Helper",
   "description": "Generates commit messages and copies to clipboard",
   "version": "0.0.1",
-  "publisher": "Visa_Dev",
+  "publisher": "VisaDev",
   "license": "MIT",
   "engines": {
     "vscode": "^1.103.0"
