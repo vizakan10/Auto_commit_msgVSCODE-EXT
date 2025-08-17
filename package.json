@@ -3,7 +3,7 @@
   "displayName": "Auto-Commit_Message",
   "description": "Generates commit messages and copies to clipboard",
   "version": "0.0.1",
-  "publisher": "visakan",
+  "publisher": "Visa_Dev",
   "license": "MIT",
   "engines": {
     "vscode": "^1.103.0"
