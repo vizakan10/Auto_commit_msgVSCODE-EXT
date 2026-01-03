@@ -7,18 +7,14 @@
 ## Features
 
 - Generate commit messages with conventional commit types:
-  - `feat` – A new feature
-  - `fix` – A bug fix
-  - `docs` – Documentation changes
-  - `style` – Formatting, missing semicolons, etc.
-  - `refactor` – Code changes that don’t fix a bug or add a feature
-  - `perf` – Performance improvements
-  - `test` – Adding or fixing tests
-  - `chore` – Maintenance tasks, build scripts, configs
+  - `feat`, `fix`, `docs`, `style`, `refactor`, `perf`, `test`, `chore`
 - Optional commit scope.
 - Executes `git add .` and `git commit -m "message"`.
 - Push command is written in terminal; press Enter to execute.
 - Fallback: copies commit message to clipboard if no terminal is available.
+- **Right-click menu:**
+  - **Git Status**: Shows git status in a notification and full output in the Output panel.
+  - **Git Init**: Initializes a git repository and shows the result in a notification.
 
 > ⚠️ **Note:** Automatic detection of file changes on save is not supported. You need to trigger the command manually.
 
@@ -40,9 +36,11 @@
 - Follow the same prompts as above.
 
 ### Editor Context Menu
-- Right-click inside the editor.  
-- Select **Generate Commit Message** from the context menu.  
-- Follow the prompts.
+- Right-click inside the editor.
+- Select from these context menu options:
+  - **Generate Commit Message**: Prompts for type, scope, and message, then runs git add/commit/push or copies to clipboard.
+  - **Git Status**: Shows a summary of `git status` in a notification, with a "Show More" button to view the full output in the Output panel.
+  - **Git Init**: Initializes a new git repository and shows the result in a notification.
 
 ---
 
