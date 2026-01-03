@@ -3,7 +3,7 @@
   "displayName": "Viza Commit Helper",
   "description": "Generates commit messages and copies to clipboard",
   "version": "0.0.5",
-   "icon": "images/icon.png", 
+  "icon": "images/icon.png",
   "publisher": "VisaDev",
   "license": "MIT",
   "engines": {
@@ -17,7 +17,8 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:viza.generateCommit"
+    "onCommand:viza.generateCommit",
+    "onStartupFinished"
   ],
   "main": "./out/extension.js",
   "contributes": {
@@ -25,11 +26,20 @@
       {
         "command": "viza.generateCommit",
         "title": "Generate Commit Message"
+      },
+      {
+        "command": "viza.gitStatus",
+        "title": "Git Status"
+      },
+      {
+        "command": "viza.gitInit",
+        "title": "Git Init"
       }
     ],
     "keybindings": [
       {
         "command": "viza.generateCommit",
+        
         "key": "ctrl+alt+h",
         "when": "editorTextFocus"
       }
@@ -38,6 +48,16 @@
       "editor/context": [
         {
           "command": "viza.generateCommit",
+          "when": "editorTextFocus",
+          "group": "z_end"
+        },
+        {
+          "command": "viza.gitStatus",
+          "when": "editorTextFocus",
+          "group": "z_end"
+        },
+        {
+          "command": "viza.gitInit",
           "when": "editorTextFocus",
           "group": "z_end"
         }
@@ -53,14 +73,14 @@
     "test": "vscode-test"
   },
   "devDependencies": {
-    "@types/vscode": "^1.103.0",
     "@types/mocha": "^10.0.10",
-    "@types/node": "22.x",
-    "@typescript-eslint/eslint-plugin": "^8.39.0",
-    "@typescript-eslint/parser": "^8.39.0",
-    "eslint": "^9.32.0",
-    "typescript": "^5.9.2",
-    "@vscode/test-cli": "^0.0.11",
-    "@vscode/test-electron": "^2.5.2"
+    "@types/node": "^25.0.3",
+    "@types/vscode": "^1.107.0",
+    "@typescript-eslint/eslint-plugin": "^8.51.0",
+    "@typescript-eslint/parser": "^8.51.0",
+    "@vscode/test-cli": "^0.0.12",
+    "@vscode/test-electron": "^2.5.2",
+    "eslint": "^9.39.2",
+    "typescript": "^5.9.3"
   }
 }

@@ -58,6 +58,44 @@ export function activate(context: vscode.ExtensionContext) {
     });
 
     context.subscriptions.push(manualCommit);
+
+    // Git Status Command
+    const gitStatus = vscode.commands.registerCommand('viza.gitStatus', async () => {
+        const cp = await import('child_process');
+        const cwd = vscode.workspace.workspaceFolders?.[0]?.uri.fsPath;
+        cp.exec('git status', { cwd }, (err, stdout, stderr) => {
+            if (err) {
+                vscode.window.showErrorMessage(`git status failed: ${stderr || err.message}`);
+                return;
+            }
+            const maxLen = 300;
+            let msg = stdout || 'No output from git status';
+            let summary = msg.length > maxLen ? msg.slice(0, maxLen) + '...' : msg;
+            vscode.window.showInformationMessage(summary, 'Show More').then(selection => {
+                if (selection === 'Show More') {
+                    const output = vscode.window.createOutputChannel('Git Status');
+                    output.clear();
+                    output.append(stdout);
+                    output.show(true);
+                }
+            });
+        });
+    });
+    context.subscriptions.push(gitStatus);
+
+    // Git Init Command
+    const gitInit = vscode.commands.registerCommand('viza.gitInit', async () => {
+        const cp = await import('child_process');
+        const cwd = vscode.workspace.workspaceFolders?.[0]?.uri.fsPath;
+        cp.exec('git init', { cwd }, (err, stdout, stderr) => {
+            if (err) {
+                vscode.window.showErrorMessage(`git init failed: ${stderr || err.message}`);
+                return;
+            }
+            vscode.window.showInformationMessage(stdout || 'Initialized a new Git repository (git init)');
+        });
+    });
+    context.subscriptions.push(gitInit);
 }
 
 export function deactivate() {}
