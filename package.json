@@ -2,7 +2,7 @@
   "name": "viza",
   "displayName": "Viza Commit Helper",
   "description": "Generates commit messages and copies to clipboard",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "icon": "images/icon.png",
   "publisher": "VisaDev",
   "license": "MIT",
@@ -39,7 +39,6 @@
     "keybindings": [
       {
         "command": "viza.generateCommit",
-        
         "key": "ctrl+alt+h",
         "when": "editorTextFocus"
       }
