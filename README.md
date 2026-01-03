@@ -16,48 +16,44 @@
   - `test` – Adding or fixing tests
   - `chore` – Maintenance tasks, build scripts, configs
 - Optional commit scope.
-- Auto-generated commit messages on file save.
 - Executes `git add .` and `git commit -m "message"`.
 - Push command is written in terminal; press Enter to execute.
 - Fallback: copies commit message to clipboard if no terminal is available.
+
+> ⚠️ **Note:** Automatic detection of file changes on save is not supported. You need to trigger the command manually.
 
 ---
 
 ## Usage
 
 ### Command Palette
-1. Press `Ctrl+Shift+P` (Windows/Linux) or `Cmd+Shift+P` (macOS).
-2. Type **Generate Commit Message**.
-3. Press **Enter** and follow the prompts:
-   - Select commit type.
-   - Enter optional scope.
-   - Enter commit message.
+1. Press `Ctrl+Shift+P` (Windows/Linux) or `Cmd+Shift+P` (macOS).  
+2. Type **Generate Commit Message**.  
+3. Press **Enter** and follow the prompts:  
+   - Select commit type.  
+   - Enter optional scope.  
+   - Enter commit message.  
 4. Terminal executes Git commands if open, otherwise the message is copied to clipboard.
 
 ### Keyboard Shortcut
-- Press **Ctrl+Alt+H** (while the editor is focused) to trigger the command directly.
+- Press **Ctrl+Alt+H** (while the editor is focused) to trigger the command directly.  
 - Follow the same prompts as above.
 
 ### Editor Context Menu
-- Right-click inside the editor.
-- Select **Generate Commit Message** from the context menu.
+- Right-click inside the editor.  
+- Select **Generate Commit Message** from the context menu.  
 - Follow the prompts.
-
-### Auto Commit on File Save
-- When a file is saved, the extension detects changes and suggests a commit type.
-- Enter optional scope and confirm the commit message.
-- Terminal executes Git commands if open; otherwise, message is copied to clipboard.
 
 ---
 
 ## Installation
 
-1. Open VS Code.
-2. Go to Extensions (`Ctrl+Shift+X` or `Cmd+Shift+X`).
-3. Search for **Auto-Commit Message** and install.
+### From VS Code Marketplace
+1. Open VS Code.  
+2. Go to Extensions (`Ctrl+Shift+X` or `Cmd+Shift+X`).  
+3. Search for **Viza Commit Helper** and install.
 
-Or install from a VSIX file:
-
+### From VSIX File
 ```bash
 vsce package
 code --install-extension auto-commit-message-0.0.1.vsix
